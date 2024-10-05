@@ -23,10 +23,10 @@ let todos = [];
             const divbut = document.createElement("div");
             const check = document.createElement("input");
             const label = document.createElement("label");
-            label.setAttribute("for","checkb");
+            label.setAttribute("for","checkb"+index);
             label.innerHTML = tod.title;
             check.setAttribute("type","checkbox");
-            check.setAttribute("id","checkb");
+            check.setAttribute("id","checkb"+index);
             divel.setAttribute("id", "hello");
             divel.appendChild(check);
             divel.appendChild(label);
@@ -38,7 +38,6 @@ let todos = [];
             div.setAttribute("class","eldiv");
             div.appendChild(divel);
             div.appendChild(divbut);
-            
             return div;
         }
 
@@ -48,4 +47,5 @@ let todos = [];
                 const element = createTodoComponent(todos[i], i);
                 document.querySelector("#todo").appendChild(element);
             }
+           
         }
